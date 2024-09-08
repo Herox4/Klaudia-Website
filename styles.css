@@ -1,0 +1,370 @@
+
+/* Google Fonts importieren */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Lato:wght@300&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(220, 203, 183);
+    text-align: center; /* Inhalte zentrieren */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333; /* Dunkleres Grau */
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+/* "Klaudia Kraus" Text im header */
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 3em; /* Größere Schriftgröße */
+    color: #e0e0e0; /* Sehr helles Grau */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold; /* Links fett */
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px; /* Dickere Unterstreichung */
+    background: white;
+    position: absolute;
+    bottom: -5px; /* Abstand zum Text */
+    left: 0;
+}
+
+section {
+    padding: 2em;
+    margin: 2em auto; /* Zentrieren der Abschnitte */
+    max-width: 800px; /* Maximale Breite für den Inhalt */
+    flex: 1;
+}
+
+footer {
+    background-color: #333; /* Dunkleres Grau */
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: auto; /* Footer an den unteren Bildschirmrand heften */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zentrieren der Formularelemente */
+}
+
+form label {
+    margin: 0.5em 0 0.2em;
+}
+
+form input, form textarea {
+    padding: 0.5em;
+    margin-bottom: 1em;
+    width: 100%; /* Volle Breite der Eingabefelder */
+    max-width: 800px; /* Breitere Eingabefelder auf 800 Pixel */
+    resize: none; /* Größenänderung verhindern */
+}
+
+form textarea {
+    height: 100px; /* Kleineres Nachrichtenfeld */
+}
+
+form button {
+    padding: 0.7em;
+    background-color: #333; /* Dunkleres Grau */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc; /* Leicht sichtbarer Trennstrich */
+    width: 100%; /* Volle Breite */
+    margin: 2em auto;
+}
+
+.header2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 2em; /* Größere und modernere Schriftart */
+}
+
+.instagram-contact {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zentrieren der Instagram-Kontakt */
+}
+
+.instagram-contact a {
+    text-decoration: none;
+}
+
+.instagram-contact img {
+    width: 120px; /* Größeres Instagram-Logo */
+    height: 120px;
+    cursor: pointer;
+}
+
+.phone-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.phone-contact img {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5em;
+}
+
+.phone-contact p {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+/* Stile für die Startseite */
+.index-page {
+    background: url('about-me.jpg') no-repeat center top;
+    background-size: cover;
+    color: white;
+}
+
+.index-page header,
+.index-page footer {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.index-page section {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 2em;
+    margin: 2em auto;
+    max-width: 800px;
+}
+
+/* Diashow */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 1000px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto; /* Zentrieren der Diashow */
+    box-sizing: border-box; /* Padding und Border in der Breite einbeziehen */
+}
+
+.slides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 2s ease;
+    object-fit: contain;
+    object-position: center;
+}
+
+.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Angebote */
+.gallery-wrapper {
+    text-align: center; /* Zentriert die Überschrift */
+    margin: 2em auto; /* Fügt Abstand oben und unten hinzu */
+    max-width: 800px; /* Gleiche maximale Breite wie die Galerie */
+}
+
+.gallery-heading {
+    font-family: 'Lato', sans-serif;
+    font-weight: 350;
+    font-size: 2em; /* Größere und modernere Schriftart */
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 2em 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    max-width: 800px;
+    margin: auto;
+    padding: 2em 0;
+}
+
+.image-container {
+    position: relative;
+    width: 280px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.3s ease;
+}
+
+.image-container:hover img {
+    filter: grayscale(100%);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 1.5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Stile für die Über mich-Seite */
+.about-page {
+    background: url('about-me.jpg') no-repeat center top; 
+    background-size: cover; 
+    color: white; /* Textfarbe weiß für besseren Kontrast */
+}
+
+.about-page header,
+.about-page footer {
+    background-color: rgba(0, 0, 0, 0.7); /* Halbtransparenter Hintergrund */
+}
+
+.about-page section {
+    background-color: rgba(0, 0, 0, 0.7); /* Halbtransparenter Hintergrund */
+    border-radius: 10px;
+    padding: 2em;
+    margin: 2em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-me-image {
+    max-width: 70%; /* Größere Bildgröße */
+    height: auto;
+    display: block;
+    margin: 1em auto;
+    border-radius: 10px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+}
+
+/* Stile für die Kontaktseite */
+.contact-icon {
+    width: 24px; /* Kleinere Breite für das Telefon-Icon */
+    height: 24px; /* Kleinere Höhe für das Telefon-Icon */
+    vertical-align: middle; /* Ausrichtung des Icons mit dem Text */
+}
+
+.instagram-icon {
+    width: 110px; /* Größere Breite für das Instagram-Logo */
+    height: 110px; /* Größere Höhe für das Instagram-Logo */
+    vertical-align: middle; /* Ausrichtung des Logos mit dem Text */
+}
+
+.contact-header2 {
+    font-family: Arial, sans-serif; /* Schriftart für h2-Überschrift */
+    font-size: 2em;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 20px; /* Abstand nach oben */
+    margin-bottom: 20px; /* Abstand nach unten */
+}
+
+.nummer {
+    font-family: Arial, sans-serif; /* Schriftart für h2-Überschrift */
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+}
+
+/* Trennstriche */
+hr {
+    height: 2px;  /* Setzt die Höhe der Linie */
+    background-color: black; /* Ändert die Farbe der Linie */
+    margin: 25px 0; /* Fügt einen Abstand oberhalb und unterhalb der Linie hinzu */
+}
+hr.invisible-divider {
+    border: none; /* Keine sichtbare Linie */
+    height: 0; /* Höhe auf 0 setzen */
+    margin: 1em 0; /* Abstand oben und unten */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .image-gallery {
+        flex-direction: column; /* Bilder untereinander auf mobilen Geräten */
+        align-items: center;
+    }
+
+    .image-gallery img {
+        max-width: 100%; /* Bilder in voller Breite auf mobilen Geräten */
+    }
+
+    .slideshow-container {
+        height: 400px; /* Höhe der Diashow an mobile Bildschirme anpassen */
+    }
+
+    .slides {
+        height: 100%; /* Bilder passen sich der Höhe des Containers an */
+    }
+}
