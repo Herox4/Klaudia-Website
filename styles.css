@@ -360,11 +360,15 @@ hr {
 }
 
 /* Trennstriche */
-hr {
-    height: 2px;  /* Setzt die Höhe der Linie */
+.contact-hr {
+    height: 5px;  /* Setzt die Höhe der Linie */
     background-color: black; /* Ändert die Farbe der Linie */
-    margin: 25px 0; /* Fügt einen Abstand oberhalb und unterhalb der Linie hinzu */
+    margin: 25px center; /* Fügt einen Abstand oberhalb und unterhalb der Linie hinzu */
+    border: none;
+    width: 500px;
+    border-radius: 10px;
 }
+
 hr.invisible-divider {
     border: none; /* Keine sichtbare Linie */
     height: 0; /* Höhe auf 0 setzen */
