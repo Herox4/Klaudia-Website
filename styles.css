@@ -82,30 +82,6 @@ form {
     align-items: center; /* Zentrieren der Formularelemente */
 }
 
-form label {
-    margin: 0.5em 0 0.2em;
-}
-
-form input, form textarea {
-    padding: 0.5em;
-    margin-bottom: 1em;
-    width: 100%; /* Volle Breite der Eingabefelder */
-    max-width: 800px; /* Breitere Eingabefelder auf 800 Pixel */
-    resize: none; /* Größenänderung verhindern */
-}
-
-form textarea {
-    height: 100px; /* Kleineres Nachrichtenfeld */
-}
-
-form button {
-    padding: 0.7em;
-    background-color: #333; /* Dunkleres Grau */
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
 hr {
     border: none;
     height: 1px;
@@ -309,6 +285,52 @@ hr {
 }
 
 /* Stile für die Kontaktseite */
+
+.contact-inputs {
+    padding: 0.5em;
+    padding-left: 25px;
+    margin-bottom: 1em;
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    color: #666;
+    border-radius: 40px;
+}
+
+.contact textarea{
+    font-family: Arial, sans-serif;
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+
+.contact-inputs:focus{
+    border: 2px solid #ff994f;
+}
+
+.contact-inputs::placeholder{
+    color:#a9a9a9;
+}
+
+.contact button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    gap: 10px;
+    border: none;
+    border-radius: 40px;
+    background: linear-gradient(270deg,#f5ac77,#ffb444);
+    cursor: pointer;
+}
+
+.contact button img{
+    height: 15px;
+}
+
 .contact-icon {
     width: 24px; /* Kleinere Breite für das Telefon-Icon */
     height: 24px; /* Kleinere Höhe für das Telefon-Icon */
@@ -350,7 +372,7 @@ hr.invisible-divider {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .image-gallery {
         flex-direction: column; /* Bilder untereinander auf mobilen Geräten */
         align-items: center;
@@ -366,5 +388,9 @@ hr.invisible-divider {
 
     .slides {
         height: 100%; /* Bilder passen sich der Höhe des Containers an */
+    }
+
+    .contact-inputs{
+        width: 80vw;
     }
 }
