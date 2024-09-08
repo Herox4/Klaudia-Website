@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = htmlspecialchars($_POST['message']);
 
     // E-Mail-Adresse des Empfängers
-    $to = "deine-email@example.com";
+    $to = "dennis.thomiczny@gmx.net";
     $subject = "Neue Kontaktanfrage von $name";
     $body = "Name: $name\nE-Mail: $email\n\nNachricht:\n$message";
     $headers = "From: $email";
