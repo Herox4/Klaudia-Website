@@ -136,7 +136,7 @@ hr {
 
 /* Stile für die Startseite */
 .index-page {
-    background: url('about-me.jpg') no-repeat center top;
+    background: url('assets/about-me.jpg') no-repeat center top;
     background-size: cover;
     color: white;
 }
@@ -255,7 +255,7 @@ hr {
 
 /* Stile für die Über mich-Seite */
 .about-page {
-    background: url('about-me.jpg') no-repeat center top; 
+    background: url('assets/about-me.jpg') no-repeat center top; 
     background-size: cover; 
     color: white; /* Textfarbe weiß für besseren Kontrast */
 }
