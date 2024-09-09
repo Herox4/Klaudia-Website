@@ -397,4 +397,8 @@ hr.invisible-divider {
     .contact-inputs{
         width: 80vw;
     }
+
+    .contact-hr{
+        max-width: 100%;
+    }
 }
